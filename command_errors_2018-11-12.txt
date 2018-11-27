@@ -1,0 +1,16 @@
+[16:32-2018-11-12]
+Discord.Net.HttpException: The server responded with error 403: Forbidden
+   at Discord.Net.Queue.RequestBucket.SendAsync(RestRequest request)
+   at Discord.Net.Queue.RequestQueue.SendAsync(RestRequest request)
+   at Discord.API.DiscordRestApiClient.SendInternalAsync(String method, String endpoint, RestRequest request)
+   at Discord.API.DiscordRestApiClient.SendAsync(String method, String endpoint, String bucketId, ClientBucketType clientBucket, RequestOptions options)
+   at Discord.API.DiscordRestApiClient.CreateGuildBanAsync(UInt64 guildId, UInt64 userId, CreateGuildBanParams args, RequestOptions options)
+   at Discord.Rest.GuildHelper.AddBanAsync(IGuild guild, BaseDiscordClient client, UInt64 userId, Int32 pruneDays, String reason, RequestOptions options)
+   at NadekoBot.Modules.Administration.Administration.UserPunishCommands.Ban(IGuildUser user, String msg)
+   at Discord.Commands.ModuleClassBuilder.<>c__DisplayClass6_0.<<BuildCommand>g__ExecuteCallback|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Discord.Commands.CommandInfo.ExecuteInternalAsync(ICommandContext context, Object[] args, IServiceProvider services)
+   at Discord.Commands.CommandInfo.ExecuteInternalAsync(ICommandContext context, Object[] args, IServiceProvider services)
+   at Discord.Commands.CommandInfo.ExecuteInternalAsync(ICommandContext context, Object[] args, IServiceProvider services)
+   at Discord.Commands.CommandInfo.ExecuteAsync(ICommandContext context, IEnumerable`1 argList, IEnumerable`1 paramList, IServiceProvider services)
+------
